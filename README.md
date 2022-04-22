@@ -39,7 +39,7 @@ from flask import Flask,render_template, request
 A graph structure is constructed using dictionaries.  
 There are two types of nodes in the graph, i.e., funds nodes and managers nodes. 
 The funds nodes are also divided into two to distinguish between two different fund types. 
-And the vertices are the connections between managers and the funds. 
-funds:{type1:{fund_name:{managers}}, type2:{fund_name:{managers}}}
+And the vertices are the connections between managers and the funds.   
+funds:{type1:{fund_name:{managers}}, type2:{fund_name:{managers}}}  
 managers:{name:{funds}}  
 Recall the data structure we used in the Kevin-Bacon problem.
