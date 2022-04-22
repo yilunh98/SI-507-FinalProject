@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8"/>
+    <title>Newest funds information and prediction!</title>
+</head>
+<body>
+    <h2>Search for specific funds...</h2>
+    <form action="/handle_form_funds" method="POST">
+        <p>
+            Do you have any specific fund you want to see?
+            <select name="funds">
+                <option value=""></option>
+                {% for m in data.keys() %}
+                    {% for k, v in data[m].items() %}
+                        <option value="{{k}}">{{v['name']}}</td>
+                    {% endfor %}
+                {% endfor %}
+        </p>
+        <!-- <input type="submit" name="back" value="Back"/> -->
+        <input type="submit" name="submit" value="Submit"/>
+    </form>
+    <p><a href="/options">Back</a></p>
+</body>
+</html>

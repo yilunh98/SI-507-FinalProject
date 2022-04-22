@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<style>th {
+        text-align: left;
+      }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>rankings</title>
+</head>
+<body>
+    <h2>Today's funds information is... </h2>
+
+    <table style="width:60%">
+        <tr>
+            <th>Funds Name</th>
+            <th>Net Value</th>
+            <th>Accumulated Value</th>
+            <th>Growth Rate</th>
+            <th>Manager</th>
+        </tr>
+        
+        {% for m in data.keys() %}
+            {% for v in data[m].values() %}
+            <tr>
+                <td>{{v['name']}}</td>
+                <td>{{v['dwjz']}}</td>
+                <td>{{v['ljjz']}}</td>
+                <td>{{v['zzl']}}</td>
+                <td>{{v['manager']}}</td>
+            </tr>
+            {% endfor %}
+        {% endfor %}
+    </table>
+
+    <p><a href='/options'>Back</a></p>
+    <p><a href='/'>Homepage</a></p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8"/>
+    <title>Newest funds information and prediction!</title>
+</head>
+<body>
+    <h2>Search for specific funds managers...</h2>
+    <form action="/handle_form_managers" method="POST">
+        <p>
+            Do you have any specific manager you want to see?
+            <select name="managers">
+                <option value=""></option>
+                {% for i in data %}
+                    <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+        </p>
+        <!-- <input type="submit" name="back" value="Back"/> -->
+        <input type="submit" name="submit" value="Submit"/>
+    </form>
+    <p><a href="/options">Back</a></p>
+</body>
+</html>

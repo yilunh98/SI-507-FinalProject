@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<style>th {
+        text-align: left;
+      }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>rankings</title>
+</head>
+<body>
+    <h2>Relevant fund information is... </h2>
+
+    <table style="width:60%">
+        <tr>
+            <th>Funds Name</th>
+            <th>Net Value</th>
+            <th>Accumulated Value</th>
+            <th>Growth Rate</th>
+            <th>Manager</th>
+        </tr>
+        <tr>
+            <td>{{data['name']}}</td>
+            <td>{{data['dwjz']}}</td>
+            <td>{{data['ljjz']}}</td>
+            <td>{{data['zzl']}}</td>
+            <td>{{data['manager']}}</td>
+        </tr>
+    </table>
+
+    <p><a href='/funds'>Back</a></p>
+    <p><a href='/'>Homepage</a></p>
+</body>
+</html>
